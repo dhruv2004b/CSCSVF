@@ -19,7 +19,7 @@ const App = () => {
     [...files].forEach((file) => formData.append("files", file));
 
     try {
-      const { data } = await axios.post("http://localhost:5000/upload", formData, {
+      const { data } = await axios.post("https://cscsvb.onrender.com/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setCommonSymbols(data.commonSymbols);
